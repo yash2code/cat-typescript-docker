@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "c946698a-fdd0-4b22-8623-7199d8706a74",
+		"name": "yash cat api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26283977"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"yash\",\r\n    \"password\": \"yash\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"yash\",\r\n    \"password\": \"yash\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all cats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cats",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload cat pic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/yasha/OneDrive/Desktop/cat-1.jpg"
+						},
+						{
+							"key": "description",
+							"value": "My only other Cat",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/cats/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update cat",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/yasha/OneDrive/Desktop/cat-1.jpg"
+						},
+						{
+							"key": "description",
+							"value": "my description",
+							"type": "text"
+						},
+						{
+							"key": "filename",
+							"value": "my file",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/cats/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "65462368b5fde8b44ad74da5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cat by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cats/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "65462368b5fde8b44ad74da5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete cat by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/cats/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cats",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "654497f86a504015d3154395"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Inlhc2giLCJpYXQiOjE2OTkxMDAyMDksImV4cCI6MTY5OTEwMDgwOX0.3FcvBWqOHy7fqB3YvX4ShoiH5rNdGV2_U76ssnsGbHU",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
