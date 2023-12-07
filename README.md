@@ -1,3 +1,22 @@
+### Overview
+#### RESTful API for uploading and managing cat pictures.
+Requirements
+API support the following operations:
+
+• Upload a cat pic.
+
+• Delete a cat pic.
+
+
+• Update a previously uploaded cat pic (not just metadata) in place.
+• Fetch a particular cat image file by its ID.
+
+• Fetch a list of the uploaded cat pics.
+
+• Application is Dockerized, 
+
+• authentication/authorization
+
 # Application Setup and Testing with Docker Compose
 
 ## Prerequisites
